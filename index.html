@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSH Drive — персональная интеграция с Google Drive</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+         max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; line-height: 1.6; }
+  h1 { font-size: 1.9rem; margin-bottom: .2em; }
+  h2 { font-size: 1.2rem; margin-top: 2em; }
+  .lead { font-size: 1.05rem; opacity: .85; }
+  ul { padding-left: 1.2em; }
+  footer { margin-top: 3em; padding-top: 1.2em; border-top: 1px solid rgba(128,128,128,.35);
+           font-size: .9rem; opacity: .8; }
+  a { color: #0b62d0; }
+</style>
+</head>
+<body>
+
+<h1>DSH Drive</h1>
+<p class="lead">Персональная интеграция, которая даёт владельцу аккаунта доступ к его
+собственному Google Drive из локального инструмента.</p>
+
+<h2>Что делает приложение</h2>
+<p>DSH Drive — это OAuth-клиент для личного использования. Он подключает локальное
+приложение-ассистент (DeepSeek Harness, работающий на компьютере владельца) к Google Drive
+владельца аккаунта, чтобы работать с его документами и таблицами:</p>
+<ul>
+  <li>поиск файлов и папок на Диске и просмотр их метаданных;</li>
+  <li>чтение содержимого документов Google Docs и таблиц Google Sheets
+      (файлы выгружаются локально в форматах <code>.docx</code> / <code>.xlsx</code>);</li>
+  <li>создание и обновление документов и таблиц по запросу владельца
+      (локальный файл загружается обратно и сохраняется как родной документ Google).</li>
+</ul>
+
+<h2>Кто пользуется приложением</h2>
+<p>Приложение не является публичным сервисом и не предназначено для других пользователей.
+Единственный пользователь — владелец Google-аккаунта, который сам создал этот OAuth-клиент
+и авторизовал его на своём компьютере. Приложение не собирает данные других людей и не
+имеет собственных серверов: все операции выполняются локально.</p>
+
+<h2>Доступ к данным Google</h2>
+<p>Приложение запрашивает единственный OAuth-разрешение — <code>https://www.googleapis.com/auth/drive</code>
+(доступ к файлам Google Drive). Разрешение используется исключительно для перечисленных выше
+операций с файлами владельца аккаунта.</p>
+
+<h2>Конфиденциальность</h2>
+<p>Как приложение обращается с данными Google, описано в
+<a href="privacy.html">Политике конфиденциальности</a>.</p>
+
+<footer>
+  <p>Контакт: <a href="mailto:gribches@gmail.com">gribches@gmail.com</a><br>
+  Обновлено: 14 октября 2026 г.</p>
+  <p>DSH Drive не связан с Google LLC и не одобрен компанией Google.</p>
+</footer>
+
+</body>
+</html>
